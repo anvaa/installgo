@@ -1,6 +1,6 @@
 #!/bin/bash
 
-VERSION=1.21.3
+VERSION=1.22.0
 
 ## Download the latest version of Golang
 echo "Downloading Go $VERSION"
@@ -29,8 +29,9 @@ else
     exit 1
 fi
 
-echo 'export GOPATH=$HOME/.local/share/go' >> "$SHELL_RC"
+echo 'export GOPATH=$HOME/.go' >> "$SHELL_RC"
 echo 'export PATH=$HOME/.local/share/go/bin:$PATH' >> "$SHELL_RC"
+source .$SHELL_TYPE
 
 ## Verify the installation
 if [ -x "$(command -v go)" ]; then
