@@ -1,15 +1,18 @@
 #!/bin/bash
 
-VERSION=1.21.3
+VERSION=1.22.0
+
+CPU=arm64 #rpi 4
+#CPU=armv6l #rpi zw
 
 ## Download the latest version of Golang
 echo "Downloading Go $VERSION"
-wget https://dl.google.com/go/go$VERSION.linux-armv6l.tar.gz
+wget https://dl.google.com/go/go$VERSION.linux-$CPU.tar.gz
 echo "Downloading Go $VERSION completed"
 
 ## Extract the archive
 echo "Extracting..."
-tar -C ~/.local/share -xzf go$VERSION.linux-armv6l.tar.gz
+tar -C ~/.local/share -xzf go$VERSION.linux-$CPU.tar.gz
 echo "Extraction complete"
 
 ## Detect the user's shell and add the appropriate path variables
@@ -29,7 +32,7 @@ else
     exit 1
 fi
 
-echo 'export GOPATH=$HOME/.local/share/go' >> "$SHELL_RC"
+echo 'export GOPATH=$HOME/.go' >> "$SHELL_RC"
 echo 'export PATH=$HOME/.local/share/go/bin:$PATH' >> "$SHELL_RC"
 
 ## Verify the installation
@@ -45,4 +48,4 @@ else
 fi
 
 ## Clean up
-rm go$VERSION.linux-armv6l.tar.gz
+rm go$VERSION.linux-$CPU.tar.gz
