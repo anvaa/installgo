@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# Update Go version to install
+# Find latest Go version https://go.dev/dl/
 VERSION=1.22.0
 
 ## Download the latest version of Golang

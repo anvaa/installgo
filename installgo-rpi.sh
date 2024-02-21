@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Update Go version to install
-# Newest Go version https://go.dev/dl/
+# Find latest Go version https://go.dev/dl/
 VERSION=1.22.0
 
 # Select rpi version cpu
