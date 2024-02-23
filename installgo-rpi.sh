@@ -16,7 +16,7 @@ echo "Downloading Go $VERSION completed"
 
 ## Extract the archive
 echo "Extracting..."
-tar -C ~/.local/share -xzf go$VERSION.linux-$CPU.tar.gz
+tar -C /usr/local -xzf go$VERSION.linux-$CPU.tar.gz
 echo "Extraction complete"
 
 ## Detect the user's shell and add the appropriate path variables
@@ -36,8 +36,8 @@ else
     exit 1
 fi
 
-echo 'export GOPATH=$HOME/.go' >> "$SHELL_RC"
-echo 'export PATH=$HOME/.local/share/go/bin:$PATH' >> "$SHELL_RC"
+echo 'export GOPATH=$HOME/go' >> "$SHELL_RC"
+echo 'export PATH=/usr/local/go/bin:$PATH' >> "$SHELL_RC"
 source .$SHELL_TYPE
 
 ## Verify the installation
