@@ -5,7 +5,7 @@
 VERSION=1.22.0
 
 # Select rpi version cpu
-CPU=arm64 #rpi 4
+CPU=arm64 #rpi 4/5
 #CPU=armv6l #rpi zw
 echo "Installing Go$VERSION for $CPU"
 
@@ -38,6 +38,7 @@ fi
 
 echo 'export GOPATH=$HOME/go' >> "$SHELL_RC"
 echo 'export PATH=/usr/local/go/bin:$PATH' >> "$SHELL_RC"
+echo 'export PATH=$HOME/go/bin:$PATH' >> "$SHELL_RC"
 source .$SHELL_TYPE
 
 ## Verify the installation
