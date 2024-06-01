@@ -27,10 +27,7 @@ if [ "$SHELL_TYPE" = "zsh" ]; then
     SHELL_RC="$HOME/.zshrc"
 elif [ "$SHELL_TYPE" = "bash" ]; then
     echo "Found Bash shell"
-    SHELL_RC="$HOME/.bashrc"
-elif [ "$SHELL_TYPE" = "fish" ]; then
-    echo "Found Fish shell"
-    SHELL_RC="$HOME/.config/fish/config.fish"
+    SHELL_RC="/home/pi/.bashrc"
 else
     echo "Unsupported shell: $SHELL_TYPE"
     exit 1
