@@ -1,3 +1,3 @@
 # installgo
 
-Install scripts for Go on amd64 and Raspberry pi
+Install scripts for Go for all platforms
